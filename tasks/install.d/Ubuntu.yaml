@@ -1,0 +1,15 @@
+---
+
+# task file for HadenLabs.Ntp
+
+- name: Ensure apt cache is up to date
+  apt:
+    update_cache: yes
+
+
+- name: Install ntp dependencies
+  
+  apt: name={{ item }} state=present update_cache=yes
+  
+  with_items: ntp_packages
+  tag: ntp

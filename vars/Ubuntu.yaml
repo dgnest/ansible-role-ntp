@@ -1,0 +1,13 @@
+---
+# vars file for HadenLabs.Ntp (Ubuntu specific)
+
+_ntp_file_path: '/etc/ntp.conf'
+
+_ntp:
+  templates:
+    - src: "ntp.conf.j2"
+    - dest: "{{ ntp_file_path}}"
+
+_ntp_package_dependencies:
+  - build-essential
+  - ntp

@@ -1,0 +1,10 @@
+---
+# task file for HadenLabs.Ntp
+
+- name: copy templates
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: "{{ item.mode }}"
+  with_items: _ntp.templates
+  when: _ntp.templates is defined
