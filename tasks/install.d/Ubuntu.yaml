@@ -6,10 +6,7 @@
   apt:
     update_cache: yes
 
-
 - name: Install ntp dependencies
-  
   apt: name={{ item }} state=present update_cache=yes
-  
-  with_items: ntp_packages
-  tag: ntp
+  with_items: _ntp_packages
+  when: _ntp_packages is defined

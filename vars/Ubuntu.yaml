@@ -8,6 +8,6 @@ _ntp:
     - src: "ntp.conf.j2"
     - dest: "{{ ntp_file_path}}"
 
-_ntp_package_dependencies:
+_ntp_packages:
   - build-essential
   - ntp
