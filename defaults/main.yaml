@@ -1,0 +1,4 @@
+---
+# defaults file for hadenlabs.ntp
+
+ntp_server: amazon
