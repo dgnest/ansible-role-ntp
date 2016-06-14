@@ -5,7 +5,7 @@ _ntp_file_path: '/etc/ntp.conf'
 _ntp:
   templates:
     - src: "ntp.conf.j2"
-    - dest: "{{ ntp_file_path}}"
+      dest: "{{ _ntp_file_path}}"
 
 # _ntp.create_files:
 #   - path: "{{ _path_dir }}"
