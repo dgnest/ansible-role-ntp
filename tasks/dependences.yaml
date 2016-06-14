@@ -1,5 +1,4 @@
 ---
-
 # task file for HadenLabs.Ntp
 
 - name: Update package repositories
@@ -7,9 +6,6 @@
   apt:
     update_cache: True
   when: ansible_distribution == "Ubuntu"
-  tags:
-    - apt
-    - update_cache
 
 - name: Install ntp package dependencies
   sudo: yes
@@ -17,11 +13,8 @@
     name: "{{ item }}"
     state: present
   register: install_ntp_package_dependencies
-  when: ntp_package_dependencies is defined
-  with_items: ntp_package_dependencies
-  tags:
-    - apt
-    - dependencies
+  with_items: _ntp_package_dependencies
+  when: _ntp_package_dependencies is defined
 - debug: var=install_ntp_package_dependencies.stdout_lines
 
 - name: Install ntp dependencies
@@ -30,9 +23,6 @@
     name: "{{ item.name }}"
     state: present
   register: install_ntp_dependencies
-  when: ntp_dependencies is defined
-  with_items: ntp_dependencies
-  tags:
-    - apt
-    - dependencies
+  with_items: _ntp_dependencies
+  when: _ntp_dependencies is defined
 - debug: var=install_ntp_dependencies.stdout_lines
