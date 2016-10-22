@@ -66,6 +66,10 @@ maintainer-clean: distclean
 	rm -rf $(ROOT_DIR)/lib/
 
 
+test:
+	$(TEST)
+
+
 sync:
 	$(SYNC)
 
