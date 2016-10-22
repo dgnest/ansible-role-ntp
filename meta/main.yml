@@ -2,7 +2,7 @@
 galaxy_info:
   author: Luis Mayta
   description: This Ansible Role install ntp
-  company: hadenlabs
+  company: dgnest
   version: 0.0.3
   license: Mit
   min_ansible_version: 1.6

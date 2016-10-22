@@ -1,5 +1,5 @@
 ---
-# task for HadenLabs.Ntp
+# task for Dgnest.Ntp
 
 - include: install.d/CentOS.yaml
   when: ansible_distribution == "CentOS"

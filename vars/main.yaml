@@ -1,5 +1,5 @@
 ---
-# vars file for hadenlabs.ntp
+# vars file for dgnest.ntp
 _ntp_file_path: '/etc/ntp.conf'
 
 _ntp:
