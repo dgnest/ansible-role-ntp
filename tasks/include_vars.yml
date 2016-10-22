@@ -1,6 +1,6 @@
 ---
 
-# task for HadenLabs.Ntp
+# task for Dgnest.Ntp
 
 
 - name: include os specific variables

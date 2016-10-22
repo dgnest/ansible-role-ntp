@@ -1,5 +1,5 @@
 ---
-# environment file for HadenLabs.Ntp
+# environment file for Dgnest.Ntp
 
 - name: Create files ntp
   sudo: yes

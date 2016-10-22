@@ -1,10 +1,9 @@
-# Ansible Role ansible-role-ntp
+# Ansible Role ntp
 
 <span class="badges" align="center">
-[![GitHub tag](https://img.shields.io/github/tag/hadenlabs/ansible-role-ntp.svg?maxAge=2592000)](https://github.com/hadenlabs/ansible-role-ntp)
-[![Build Status](https://travis-ci.org/hadenlabs/ansible-role-ntp.svg)](https://travis-ci.org/hadenlabs/ansible-role-ntp)
-[![Stories in Ready](https://badge.waffle.io/hadenlabs/ansible-role-ntp.svg?label=ready&title=Ready)](http://waffle.io/hadenlabs/ansible-role-ntp)
-[![GitHub issues](https://img.shields.io/github/issues/hadenlabs/ansible-role-ntp.svg)](https://github.com/hadenlabs/ansible-role-ntp/issues)
+[![GitHub tag](https://img.shields.io/github/tag/dgnest/ansible-role-ntp.svg?maxAge=2592000)](https://github.com/dgnest/ansible-role-ntp)
+[![Build Status](https://travis-ci.org/dgnest/ansible-role-ntp.svg)](https://travis-ci.org/dgnest/ansible-role-ntp)
+[![GitHub issues](https://img.shields.io/github/issues/dgnest/ansible-role-ntp.svg)](https://github.com/dgnest/ansible-role-ntp/issues)
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](LICENSE)
 </span>
 
@@ -14,7 +13,7 @@ This Ansible Role infuses antigravity, you are warned
 Install it with the following command:
 
 ```bash
-$ ansible-galaxy install hadenlabs.ntp
+$ ansible-galaxy install dgnest.ntp
 
 ```
 Requirements
@@ -30,7 +29,7 @@ Here is the list of all variables and their default values:
 
 ```yaml
     ---
-    # defaults file for hadenlabs.ntp
+    # defaults file for dgnest.ntp
 ```
 
 
@@ -47,7 +46,7 @@ To run this playbook with default settings, create a basic playbook like this:
 ```yaml
     - hosts: servers
       roles:
-        - hadenlabs.ntp
+        - dgnest.ntp
 ```
 
 
@@ -65,17 +64,12 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Credits
 
-- [author][link-author]
+Made with :heart: ️:coffee:️ and :pizza: by [dgnest][link-company].
+
 - [All Contributors][link-contributors]
-
-
----
-
-Copyright © 2016, hadenlabs
-
-Made with ♥️ and ☕️ by hadenlabs and our community.
 
 <!-- Other -->
 
-[link-author]: https://github.com/luismayta
-[link-contributors]: contributors
+[link-luis]: https://github.com/luismayta
+[link-contributors]: AUTHORS
+[link-company]: https://github.com/dgnest

@@ -1,5 +1,5 @@
 ---
-# task file for HadenLabs.Ntp
+# task file for Dgnest.Ntp
 
 - name: copy templates
   template:

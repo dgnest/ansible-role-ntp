@@ -1,5 +1,5 @@
 ---
-# vars file for HadenLabs.Ntp (Ubuntu specific)
+# vars file for Dgnest.Ntp (Ubuntu specific)
 
 _ntp_file_path: '/etc/ntp.conf'
 

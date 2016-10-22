@@ -1,5 +1,5 @@
 ---
-# task for HadenLabs.Ntp
+# task for Dgnest.Ntp
 
 - include: include_vars.yml
 
