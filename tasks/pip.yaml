@@ -2,7 +2,7 @@
 # task for Dgnest.Ntp
 
 - name: Install packages via pip ntp
-  sudo: yes
+  become: true
   pip: name="{{ item.name }}" version="{{ item.version }}"
   when: ntp_pip_dependencies is defined
   with_items: "{{ ntp_pip_dependencies | default([]) }}"

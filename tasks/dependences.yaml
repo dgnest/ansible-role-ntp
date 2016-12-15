@@ -2,13 +2,13 @@
 # task file for Dgnest.Ntp
 
 - name: Update package repositories
-  sudo: yes
+  become: true
   apt:
     update_cache: True
   when: ansible_distribution == "Ubuntu"
 
 - name: Install ntp package dependencies
-  sudo: yes
+  become: true
   apt:
     name: "{{ item }}"
     state: present
@@ -17,7 +17,7 @@
   when: _ntp_package_dependencies is defined
 
 - name: Install ntp dependencies
-  sudo: yes
+  become: true
   apt:
     name: "{{ item.name }}"
     state: present

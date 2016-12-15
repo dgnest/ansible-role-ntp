@@ -2,7 +2,7 @@
 # environment file for Dgnest.Ntp
 
 - name: Create files ntp
-  sudo: yes
+  become: true
   file:
     path: "{{ item.path }}"
     state: "{{ item.state }}"
