@@ -13,9 +13,8 @@
     name: "{{ item }}"
     state: present
   register: install_ntp_package_dependencies
-  with_items: _ntp_package_dependencies
+  with_items: "{{ _ntp_package_dependencies | default([]) }}"
   when: _ntp_package_dependencies is defined
-- debug: var=install_ntp_package_dependencies.stdout_lines
 
 - name: Install ntp dependencies
   sudo: yes
@@ -23,6 +22,5 @@
     name: "{{ item.name }}"
     state: present
   register: install_ntp_dependencies
-  with_items: _ntp_dependencies
+  with_items: "{{ _ntp_dependencies | default([]) }}"
   when: _ntp_dependencies is defined
-- debug: var=install_ntp_dependencies.stdout_lines

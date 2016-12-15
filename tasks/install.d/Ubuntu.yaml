@@ -8,5 +8,5 @@
 
 - name: Install ntp dependencies
   apt: name={{ item }} state=present update_cache=yes
-  with_items: _ntp_packages
+  with_items: "{{ _ntp_packages | default([]) }}"
   when: _ntp_packages is defined
