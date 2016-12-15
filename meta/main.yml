@@ -5,7 +5,7 @@ galaxy_info:
   company: dgnest
   version: 0.0.3
   license: Mit
-  min_ansible_version: 1.6
+  min_ansible_version: 2
   platforms:
   #- name: EL
   #  versions:
