@@ -1,9 +1,7 @@
 ---
 # task for Dgnest.Ntp
 
-- include: include_vars.yml
-
-- include: load.yaml
+- include: include_vars.yaml
 
 - include: apps.yaml
 

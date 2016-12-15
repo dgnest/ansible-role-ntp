@@ -1,4 +1,0 @@
----
-
-- name: Include distribution specific variables
-  include_vars: "{{ ansible_distribution }}.yaml"
