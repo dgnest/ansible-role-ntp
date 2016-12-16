@@ -1,8 +1,10 @@
 ---
-# task for Dgnest.Ntp
+# task for dgnest.ntp
 
-- include: install.d/CentOS.yaml
-  when: ansible_distribution == "CentOS"
-
-- include: install.d/Ubuntu.yaml
-  when: ansible_distribution == "Ubuntu"
+- name: Install ntp
+  package: name="{{ _ntp_package_name }}" state=present
+  become: true
+  register: install_ntp
+  when: _ntp_package_name is defined
+  tags:
+    - install
