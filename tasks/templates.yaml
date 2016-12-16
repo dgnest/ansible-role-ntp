@@ -5,5 +5,5 @@
   template:
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
-  with_items: _ntp.templates
+  with_items: "{{ _ntp.templates | default([]) }}"
   when: _ntp.templates is defined

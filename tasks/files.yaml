@@ -2,10 +2,10 @@
 # environment file for Dgnest.Ntp
 
 - name: Create files ntp
-  sudo: yes
+  become: true
   file:
     path: "{{ item.path }}"
     state: "{{ item.state }}"
     owner: "{{ item.owner }}"
-  with_items: _ntp_create_files
+  with_items: "{{ _ntp_create_files | default([]) }}"
   when: _ntp_create_files is defined
