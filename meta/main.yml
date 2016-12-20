@@ -4,7 +4,7 @@ galaxy_info:
   author: Luis Mayta
   description: This Ansible Role install ntp
   company: dgnest
-  version: 0.0.6
+  version: 0.0.7
   license: Mit
   min_ansible_version: 2.0
   platforms:
@@ -61,16 +61,12 @@ galaxy_info:
   #  - 9.2
   - name: Ubuntu
     versions:
-  #  - all
-  #  - lucid
-  #  - maverick
-  #  - natty
-  #  - oneiric
-  #  - precise
-  #  - quantal
-  #  - raring
-  #  - saucy
-    - trusty
+      # - all
+      - lucid    # 10.04
+      - precise  # 12.04
+      - saucy    # 13.10
+      - trusty   # 14.04
+      # - utopic   # 14.10
   #- name: SLES
   #  versions:
   #  - all
@@ -96,6 +92,8 @@ galaxy_info:
   # the platforms above, uncomment those that apply to your role.
   #
   categories:
+    - development
+    - system
   #- cloud
   #- cloud:ec2
   #- cloud:gce
@@ -104,11 +102,9 @@ galaxy_info:
   #- database
   #- database:nosql
   #- database:sql
-  - development
   #- monitoring
   #- networking
   #- packaging
-  - system
   #- web
 dependencies: []
   # List your role dependencies here, one per line. Only
