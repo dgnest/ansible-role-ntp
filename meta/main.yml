@@ -61,16 +61,12 @@ galaxy_info:
   #  - 9.2
   - name: Ubuntu
     versions:
-  #  - all
-  #  - lucid
-  #  - maverick
-  #  - natty
-  #  - oneiric
-  #  - precise
-  #  - quantal
-  #  - raring
-  #  - saucy
-    - trusty
+      # - all
+      - lucid    # 10.04
+      - precise  # 12.04
+      - saucy    # 13.10
+      - trusty   # 14.04
+      # - utopic   # 14.10
   #- name: SLES
   #  versions:
   #  - all
@@ -104,11 +100,11 @@ galaxy_info:
   #- database
   #- database:nosql
   #- database:sql
-  - development
+    - development
   #- monitoring
   #- networking
   #- packaging
-  - system
+    - system
   #- web
 dependencies: []
   # List your role dependencies here, one per line. Only
