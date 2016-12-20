@@ -15,8 +15,9 @@ ANSIBLE_DEPLOY = $(shell) $(SCRIPT_DIR)/deploy.sh
 CLEAN = $(shell) $(SCRIPT_DIR)/clean.sh
 GVM = $(shell) $(SCRIPT_DIR)/gvm.sh
 GRIP = $(shell) $(SCRIPT_DIR)/grip.sh
-INSTALL = $(shell) $(SCRIPT_DIR)/install.sh
 PYENV = $(shell) $(SCRIPT_DIR)/pyenv.sh
+INSTALL = $(shell) $(SCRIPT_DIR)/install.sh
+LINTCODE = $(shell) $(SCRIPT_DIR)/lintcode.sh
 TEST = $(shell) $(SCRIPT_DIR)/test.sh
 SYNC = $(shell) $(SCRIPT_DIR)/sync.sh
 WATCH = $(shell) $(SCRIPT_DIR)/watch.sh
@@ -47,6 +48,7 @@ distclean: clean
 environment:
 	$(PYENV)
 	$(GVM)
+	$(INSTALL)
 
 
 grip:
@@ -66,8 +68,8 @@ maintainer-clean: distclean
 	rm -rf $(ROOT_DIR)/lib/
 
 
-test:
-	$(TEST)
+lintcode:
+	$(LINTCODE)
 
 
 sync:
@@ -76,3 +78,7 @@ sync:
 
 watch:
 	$(WATCH)
+
+
+test:
+	$(TEST)
